@@ -99,7 +99,7 @@ public class GeneraPassword
         }
         var list = this.string2List(sb.ToString());
         //Collections.shuffle(list);
-        list.OrderBy(x => random.Next()).ToList();
+        list = list.OrderBy(x => random.Next()).ToList();
         var password = new StringBuilder();
         for (int i = length; i > 0; --i)
         {
